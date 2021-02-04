@@ -16,6 +16,8 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     this.authService.currentPhotoUrl.subscribe(photoUrl => this.photoUrl = photoUrl);
+    this.router.navigate(['/members']);
+
   }
 
   login() {
@@ -27,6 +29,7 @@ export class NavComponent implements OnInit {
     }, () => {
       this.router.navigate(['/members']);
     });
+    window.location.reload();
   }
 
   loggedIn() {

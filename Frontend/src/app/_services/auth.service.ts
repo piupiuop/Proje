@@ -38,6 +38,7 @@ export class AuthService {
         }
       })
     );
+    window.location.reload();
   }
 
   register(user: User) {

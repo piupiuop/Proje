@@ -24,6 +24,7 @@ export class PhotoEditorComponent implements OnInit {
 
   ngOnInit() {
     this.initializeUploader();
+
   }
 
   fileOverBase(e: any): void {
@@ -59,8 +60,10 @@ export class PhotoEditorComponent implements OnInit {
           this.authService.currentUser.photoUrl = photo.url;
           localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
         }
+        window.location.reload();
       }
     };
+
   }
 
   setMainPhoto(photo: Photo) {

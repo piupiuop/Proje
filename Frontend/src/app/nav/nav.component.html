@@ -1,5 +1,4 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-  <div class="container">
     <div *ngIf="loggedIn()" class="dropdown" dropdown>
       <span class="mr-1">
         <img src="{{photoUrl || '../../assets/user.png'}}" alt="">
@@ -22,22 +21,7 @@
         placeholder="Password" required [(ngModel)]="model.password">
       <button [disabled]="!loginForm.valid" class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
     </form>
-    <div class="ml-5"> 
-    </div>
-    <div class="ml-5"> 
-    </div>
-    <div class="ml-5"> 
-    </div>
-    <div class="ml-5"> 
-    </div>
-    <div class="ml-5"> 
-    </div>
-    <div class="ml-5"> 
-    </div>
-    <div class="ml-5"> 
-    </div>
-    <div class="ml-1"> 
-    </div>
+   <div class="container"></div>
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/members']"  >People</a>
@@ -49,10 +33,7 @@
         <a class="nav-link" [routerLink]="['/messages']"  >Messages</a>
       </li>
     </ul>
-    <a class="navbar-brand" [routerLink]="['/home']">Bookface</a>
+    <a class="navbar-brand" [routerLink]="['/members']">Bookface</a>
 
-   
-  </div>
-  
 
 </nav>
